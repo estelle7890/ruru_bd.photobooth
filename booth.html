@@ -101,3 +101,13 @@ let currentFrame = "frames/frame1.png";
 function setFrame(src){
   currentFrame = src;
 }
+let frame = new Image();
+frame.src = currentFrame;
+
+frame.onload = () => {
+  ctx.drawImage(frame, 0, 0, 300, 900);
+
+  ctx.fillStyle = "black";
+  ctx.font = "20px sans-serif";
+  ctx.fillText("Happy Ruka Day 2026", 40, 880);
+};
